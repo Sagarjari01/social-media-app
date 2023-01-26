@@ -9,9 +9,7 @@ const path = require('path')
 app.use(morgan('tiny'))
 
 app.enable('trust proxy')
-app.use(cors({
-    origin:"https://social-media-app-coral.vercel.app"
-}))
+app.use(cors())
 
 mongoose.connect(MONGOURI, {
     useNewUrlParser: true,
