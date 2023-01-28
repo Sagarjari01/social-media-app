@@ -9,7 +9,7 @@ const Profile  = ()=>{
     const [showFollow,setShowFollow] = useState(state?!state.followers.includes(userid):true)
 
     useEffect(()=>{
-       fetch(`/user/${userid}`,{
+       fetch(`https://social-media-backend-3nkr.onrender.com/user/${userid}`,{
            headers:{
                "Authorization":"Bearer "+localStorage.getItem("jwt"),
            }
@@ -21,7 +21,7 @@ const Profile  = ()=>{
     },[])
 
     const followUser = () => {
-        fetch("/follow",{
+        fetch("https://social-media-backend-3nkr.onrender.com/follow",{
             method:"put",
             headers:{
                 "Content-Type":"Application/json",
@@ -49,7 +49,7 @@ const Profile  = ()=>{
     }
 
     const unfollowUser = () => {
-        fetch("/unfollow",{
+        fetch("https://social-media-backend-3nkr.onrender.com/unfollow",{
             method:"put",
             headers:{
                 "Content-Type":"Application/json",

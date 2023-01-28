@@ -9,7 +9,7 @@ const CretePost = ()=>{
     const [url,setUrl] = useState("")
     useEffect(()=>{
        if(url){
-        fetch("/createpost",{
+        fetch("https://social-media-backend-3nkr.onrender.com/createpost",{
             method:"post",
             headers:{
                 "Content-Type":"application/json",

@@ -5,7 +5,7 @@ const Home = () => {
     const [data,setData] = useState([])
     const {state, dispatch} = useContext(UserContext)
     useEffect(()=>{
-        fetch('/allpost',{
+        fetch('https://social-media-backend-3nkr.onrender.com/allpost',{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -17,7 +17,7 @@ const Home = () => {
     },[])
     
     const likePost = (id) => {
-        fetch('/like',{
+        fetch('https://social-media-backend-3nkr.onrender.com/like',{
             method:"put",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt"),
@@ -45,7 +45,7 @@ const Home = () => {
     }
 
     const unlikePost = (id) => {
-        fetch('/unlike',{
+        fetch('https://social-media-backend-3nkr.onrender.com/unlike',{
             method:"put",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt"),
@@ -73,7 +73,7 @@ const Home = () => {
     }
 
     const makeComment = (text, postId) => {
-        fetch('/comment',{
+        fetch('https://social-media-backend-3nkr.onrender.com/comment',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -101,7 +101,7 @@ const Home = () => {
     }
 
     const deletePost = (postid)=>{
-        fetch(`/deletepost/${postid}`,{
+        fetch(`https://social-media-backend-3nkr.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")

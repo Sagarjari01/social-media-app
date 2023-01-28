@@ -5,7 +5,7 @@ const Profile = () => {
     const [myPics,setPics] = useState([])
     const [image, setImage] = useState("")
     useEffect(()=>{
-        fetch('/mypost',{
+        fetch('https://social-media-backend-3nkr.onrender.com/mypost',{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -29,7 +29,7 @@ const Profile = () => {
                 // console.log(data)
                 // localStorage.setItem("user",JSON.stringify({...state,pic:data.url}))
                 // dispatch({type:"UPDATEPIC",payload:data.url})
-                fetch('/updatepic',{
+                fetch('https://social-media-backend-3nkr.onrender.com/updatepic',{
                     method:"put",
                     headers:{
                         "Content-Type":"application/json",

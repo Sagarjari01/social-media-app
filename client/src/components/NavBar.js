@@ -36,7 +36,7 @@ const NavBar = () => {
     },[])
     const searchUser = (query) => {
         setSearch(query)
-        fetch('/search-users',{
+        fetch('https://social-media-backend-3nkr.onrender.com/search-users',{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

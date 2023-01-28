@@ -9,7 +9,7 @@ const Signin = () => {
     const { token } = useParams()
     // console.log(token)
     const postData = () => {
-        fetch("/new-password",{
+        fetch("https://social-media-backend-3nkr.onrender.com/new-password",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

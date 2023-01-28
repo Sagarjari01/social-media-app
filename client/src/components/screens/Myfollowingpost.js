@@ -16,7 +16,7 @@ const MyFollowingPost = () => {
     },[])
     
     const likePost = (id) => {
-        fetch('/like',{
+        fetch('https://social-media-backend-3nkr.onrender.com/like',{
             method:"put",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt"),
@@ -45,7 +45,7 @@ const MyFollowingPost = () => {
     }
 
     const unlikePost = (id) => {
-        fetch('/unlike',{
+        fetch('https://social-media-backend-3nkr.onrender.com/unlike',{
             method:"put",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt"),
@@ -73,7 +73,7 @@ const MyFollowingPost = () => {
     }
 
     const makeComment = (text, postId) => {
-        fetch('/comment',{
+        fetch('https://social-media-backend-3nkr.onrender.com/comment',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -102,7 +102,7 @@ const MyFollowingPost = () => {
     }
 
     const deletePost = (postid)=>{
-        fetch(`/deletepost/${postid}`,{
+        fetch(`https://social-media-backend-3nkr.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")

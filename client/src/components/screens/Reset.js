@@ -10,7 +10,7 @@ const Reset = () => {
         if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
            return M.toast({html: 'Invalid Email',classes:"#c62828 red darken-3"})
         }
-        fetch("/reset-password",{
+        fetch("https://social-media-backend-3nkr.onrender.com/reset-password",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"
